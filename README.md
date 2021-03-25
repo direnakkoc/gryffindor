@@ -1,2 +1,8 @@
 # gryffindor
-Hardware Interaction
+CAMERA MODULE
+
+GROUP
+- Gabriel
+- Steffany
+- Diren
+- Walter
