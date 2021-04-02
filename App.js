@@ -1,65 +1,61 @@
-import React, { useState, useEffect } from "react";
-import { View, TouchableOpacity } from "react-native";
-import { Camera } from "expo-camera";
-import Icon from "react-native-vector-icons/FontAwesome";
+// You have to install --> npm install @react-navigation/native
+//                     --> npm install @react-navigation/stack
+//                     --> npm install react-native-paper
 
-export default function App() {
-  const [hasPermission, setHasPermission] = useState(null);
-  const [type, setType] = useState(Camera.Constants.Type.back);
-  useEffect(() => {
-    (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
-      setHasPermission(status === "granted");
-    })();
-  }, []);
+import * as React from 'react';
+//import * as Font from 'expo-font';
+import { Button, View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Avatar } from 'react-native-paper';
 
-  if (hasPermission === null) {
-    return <View />;
-  }
-  if (hasPermission === false) {
-    return <Text>No access to camera</Text>;
-  }
-  return (
-    <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 3 }} type={type}></Camera>
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          backgroundColor: "black",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <View style={{ flex: 1, alignItems: "center" }}>
-          <Icon name="square" size={50} color="white" />
+
+//import Icon from "react-native-vector-icons/FontAwesome";
+
+//const getFonts = () => Font.loadsAsyns({
+//    'Lucida-regular':require('./assets/fonts/LCALLIG.ttf'),
+//    'Lucida-italic':require('./assets/fonts/lucida calligraphy italic.ttf')
+//})
+
+
+function HomeScreen({ navigation }) {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+
+            <Avatar.Image size={300} source={require('./assets/logo1.png')} />
+            <Text>Camera Magic was created to do amazing shots for your daily life</Text>
+            <Button
+                title="Next"
+                onPress={() => navigation.navigate('Camera')}
+            />
         </View>
-        <View style={{ flex: 1, alignItems: "center", padding:50 }}>
-          <Icon name="camera" size={70} color="white" />
-        </View>
-        <View style={{ flex: 1, alignItems: "center" }}>
-          <TouchableOpacity
-            style={{
-              borderWidth: 1,
-              borderRadius: 50,
-              backgroundColor: "white",
-              width: 50,
-              height: 50,
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-            onPress={() => {
-              setType(
-                type === Camera.Constants.Type.back
-                  ? Camera.Constants.Type.front
-                  : Camera.Constants.Type.back
-              );
-            }}
-          >
-            <Icon name="undo" size={30} color="black" />
-          </TouchableOpacity>
-        </View>
-      </View>
-    </View>
-  );
+    );
 }
+
+function DetailsScreen({ navigation }) {
+    return (
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Details Screen</Text>
+           
+            <Button title="Go back" onPress={() => navigation.goBack()} />
+          
+        </View>
+    );
+}
+
+const Stack = createStackNavigator();
+//const [fontsLoaded, setFontsLoaded] = useState(false);
+
+function App() {
+    return (
+       
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen name="Gryffindor App" component={HomeScreen} />
+                <Stack.Screen name="Camera" component={DetailsScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+
+export default App;
