@@ -22,7 +22,7 @@ function HomeScreen({ navigation }) {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 
-            <Avatar.Image size={300} source={require('./assets/logo1.png')} />
+            <Avatar.Image size={300} source={require('./assets/logo.png')} />
             <Text>Camera Magic was created to do amazing shots for your daily life</Text>
             <Button
                 title="Next"
