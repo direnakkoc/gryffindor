@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Camera } from "expo-camera";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function App() {
+
   const [hasPermission, setHasPermission] = useState(null);
   const [type, setType] = useState(Camera.Constants.Type.back);
+  const camRef = useRef(null);
+
   useEffect(() => {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync();
@@ -19,9 +22,21 @@ export default function App() {
   if (hasPermission === false) {
     return <Text>No access to camera</Text>;
   }
+
+  //taking photo function
+  async function takePicture() {
+    if (camRef) {
+      const data = await camRef.current.takePictureAsync();
+    }
+  }
+
   return (
     <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 3 }} type={type}></Camera>
+      <Camera
+        style={{ flex: 3 }}
+        type={type}
+        ref={camRef}>
+      </Camera>
       <View
         style={{
           flex: 1,
@@ -34,7 +49,7 @@ export default function App() {
         <View style={{ flex: 1, alignItems: "center" }}>
           <Icon name="square" size={50} color="white" />
         </View>
-        <View style={{ flex: 1, alignItems: "center", padding:50 }}>
+        <View style={{ flex: 1, alignItems: "center", padding: 50 }}>
           <Icon name="camera" size={70} color="white" />
         </View>
         <View style={{ flex: 1, alignItems: "center" }}>
