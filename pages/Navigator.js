@@ -17,11 +17,7 @@ const Stack = createStackNavigator();
 //Function default 
 export default function Navigator() {
     return ( //return the root 
-        <Stack.Navigator  initialRouteName='Home' /* Un comentario dentro JSX, esto si servirá :)
-        <div>
-        
-        </div>
-        */
+        <Stack.Navigator  initialRouteName='Home' /* HOME --main page default*/
         screenOptions={{
           gestureEnabled: true,
           
@@ -40,9 +36,9 @@ export default function Navigator() {
           headerTintColor: '#ffd700'
         }}>
             
-            <Stack.Screen name='Gryffindor'component={Login} />
-            <Stack.Screen name='About us'component={index}/>
-            <Stack.Screen name='camera' component={Camera} />
+            <Stack.Screen name='Gryffindor'component={Login}  /* HOME --main page *//>   
+            <Stack.Screen name='About us'component={index}  /* About us *//>
+            <Stack.Screen name='camera' component={Camera}  /* CAMERA */ />
 
 
         </Stack.Navigator>

@@ -1,3 +1,6 @@
+/**LOGIN when the user install our app, user will find this page as home page
+ */
+
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
 
@@ -12,17 +15,17 @@ export default function Login({ navigation }) {
             <Text style={styles.txts}>Welcome to Gryffindor Camera</Text>
                     
 
-            <Image source={{ uri: "https://picsum.photos/200/200" }} style={styles.imgs} />
+            <Image source={{ uri: "https://picsum.photos/200/200" }} style={styles.imgs} /* Image   *//>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('About us')} >
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('About us')} /* Button About us  */ >
 
                 <Text style={styles.txt}>About US</Text></TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('camera')} >
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('camera')} /* button camera  */>
 
                 <Text style={styles.txt}>Take a Photo</Text> </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AboutUS')} >
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AboutUS')} /* Button Instagram  */>
                 <Text style={styles.txt} >Instagram</Text> </TouchableOpacity>
         </View>
 
