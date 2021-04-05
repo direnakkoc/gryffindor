@@ -11,21 +11,21 @@ export default function indexM() {
             <Text>Our Team</Text>           
             <View style={{ flex: 1, flexDirection: 'row' }}>
                 <View style={{ backgroundColor: 'red', flexGrow: 1, }}>
-                    <Avatar.Image size={200} source={require('../assets/logo.png')} />
+                    <Avatar.Image size={200} source={require('../assets/Diren.png')} />
                     <Text>Diren Akkoc Demir - 2020266</Text> 
                 </View>
                 <View style={{ backgroundColor: 'red' }}>
-                    <Avatar.Image size={200} source={require('../assets/logo.png')} />
+                    <Avatar.Image size={200} source={require('../assets/Gabriel.pgeg')} />
                     <Text>Gabriel Climaco Brites Farina - 2020419</Text> 
                 </View>
             </View>
             <View style={{ flex: 1, flexDirection: 'row' }}>
                 <View style={{ backgroundColor: 'red', flexGrow: 1, }}>
-                    <Avatar.Image size={200} source={require('../assets/logo.png')} />
+                    <Avatar.Image size={200} source={require('../assets/Steffany.png')} />
                     <Text>Steffany Aseret Roa Cañedo - 2020431</Text> 
                 </View>
                 <View style={{ backgroundColor: 'red' }}>
-                    <Avatar.Image size={200} source={require('../assets/logo.png')} />
+                    <Avatar.Image size={200} source={require('../assets/Walter.png')} />
                     <Text>Walter Guimarães Junior - 2020403</Text> 
                 </View>
             </View>
