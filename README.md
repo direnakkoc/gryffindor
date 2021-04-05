@@ -1,2 +1,4 @@
 # gryffindor
-Hardware Interaction
+Module Camera
+
+Requeriments:
