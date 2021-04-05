@@ -22,7 +22,7 @@ export default function Login({ navigation }) {
 
                 <Text style={styles.txt}>Camera</Text></TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('AboutUS')} >
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('About us')} >
                 <Text style={styles.txt} >Instagram</Text></TouchableOpacity>
         </View>
 
