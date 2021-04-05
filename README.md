@@ -1,4 +1,4 @@
-walter and gabriel
+
 
 # gryffindor
 Module Camera
