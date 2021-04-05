@@ -11,8 +11,7 @@ export default function Login({ navigation }) {
 
 
         <View style={styles.container}>
-            <Text style={styles.txts}>Welcome to Gryffindor Camera</Text>
-            <Image source={{ uri: "https://picsum.photos/200/200" }} style={styles.imgs} />
+            <Image source={require('../assets/logo.png') } style={{height:350,width:250}} />
 
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('About us')} >
 
@@ -33,8 +32,9 @@ export default function Login({ navigation }) {
 const styles = StyleSheet.create({
    
     container: {
+        display:'flex',
         flex: 1,
-        justifyContent: "center",
+        justifyContent: "flex-start",
         alignItems: "center",
         backgroundColor: "#740001"
     },
