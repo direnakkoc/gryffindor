@@ -2,31 +2,42 @@
 PAGE FOR EDITING-- FREE PAGE */
 
 import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Image, Button, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 export default function indexM() {
     return (
         <View style={styles.container}>
-            <Text>Our Team</Text>           
+            <Text style={{ fontWeight: 'bold', fontSize: 30}}>
+                Our Team
+            </Text>        
             <View style={{ flex: 1, flexDirection: 'row' }}>
-                <View style={{ backgroundColor: 'red', flexGrow: 1, }}>
-                    <Avatar.Image size={200} source={require('../assets/Diren.png')} />
-                    <Text>Diren Akkoc Demir - 2020266</Text> 
+            
+                <View style={{ backgroundColor: '#b22222', flexGrow: 1, }}>
+                    <Avatar.Image size={200}  source={require('../assets/Diren.png')}/>                    
+                    <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
+                        Diren Akkoc Demir - 2020266
+                    </Text>
                 </View>
-                <View style={{ backgroundColor: 'red' }}>
-                    <Avatar.Image size={200} source={require('../assets/Gabriel.pgeg')} />
-                    <Text>Gabriel Climaco Brites Farina - 2020419</Text> 
+                <View style={{ backgroundColor: '#b22222' }}>
+                    <Avatar.Image size={200} source={require('../assets/Gabriel.png')} />
+                    <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
+                        Gabriel Climaco Brites Farina - 2020419
+                    </Text> 
                 </View>
             </View>
             <View style={{ flex: 1, flexDirection: 'row' }}>
-                <View style={{ backgroundColor: 'red', flexGrow: 1, }}>
+                <View style={{ backgroundColor: '#b22222', flexGrow: 1, }}>
                     <Avatar.Image size={200} source={require('../assets/Steffany.png')} />
-                    <Text>Steffany Aseret Roa Cañedo - 2020431</Text> 
+                    <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
+                        Steffany Aseret Roa Cañedo - 2020431
+                    </Text> 
                 </View>
-                <View style={{ backgroundColor: 'red' }}>
+                <View style={{ backgroundColor: '#b22222' }}>
                     <Avatar.Image size={200} source={require('../assets/Walter.png')} />
-                    <Text>Walter Guimarães Junior - 2020403</Text> 
+                    <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
+                        Walter Guimarães Junior - 2020403
+                    </Text> 
                 </View>
             </View>
 
@@ -41,7 +52,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#740001"
+        backgroundColor: "#a9a9a9"
     },
 
     button: {
