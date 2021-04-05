@@ -23,7 +23,7 @@ export default function App() {
     return <Text>No access to camera</Text>;
   }
 
-  //taking photo function
+  
   async function takePicture() {
     if (camRef) {
       const data = await camRef.current.takePictureAsync();
