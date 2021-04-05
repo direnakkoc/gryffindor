@@ -1,11 +1,11 @@
 # gryffindor
 Module Camera
 
-
-![650aa4d50fd481f04d5b302655f9202c](https://user-images.githubusercontent.com/80598073/113574009-2b4ddc00-9613-11eb-870d-4e99fbd1fd05.jpg)
-
-
+![ee1a97625b07aceaf762bd65517d85f7](https://user-images.githubusercontent.com/80598073/113574148-6f40e100-9613-11eb-9244-8e264022523b.jpg)
 
 
 
 Requeriments:
+
+Installation:
+expo install expo-camera
