@@ -1,3 +1,5 @@
+//holaaaaaaaa
+
 import React, { useState, useEffect } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Camera } from "expo-camera";
