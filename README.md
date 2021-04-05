@@ -15,4 +15,7 @@ Installation
 expo install expo-camera
 
 
+//Diren
+
+
 
