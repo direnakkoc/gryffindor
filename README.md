@@ -1,4 +1,4 @@
-
+walter and gabriel
 
 # gryffindor
 Module Camera
@@ -11,6 +11,9 @@ React native
 
 Installation
 expo install expo-camera
+
+
+//Diren
 
 
 
