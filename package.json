@@ -22,9 +22,9 @@
   },
   "rnpm": {
     "assets": [
-	"./assets/fonts/"
+      "./assets/fonts/"
     ]
-},
+  },
   "devDependencies": {
     "@babel/core": "~7.9.0"
   },
