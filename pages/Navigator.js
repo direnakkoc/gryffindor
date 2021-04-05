@@ -36,9 +36,9 @@ export default function Navigator() {
             
         }}>
 
-            <Stack.Screen name='Gryffindor' component={Login} options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}}  />
-            <Stack.Screen name='About us' component={index}  />
-            <Stack.Screen name='camera' component={Camera}  />
+            <Stack.Screen name='Gryffindor' component={Login}  options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}} />
+            <Stack.Screen name='About us' component={index}  options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}} />
+            <Stack.Screen name='camera' component={Camera}  options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}}  />
 
 
         </Stack.Navigator>
