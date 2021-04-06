@@ -10,8 +10,6 @@ import { Avatar } from 'react-native-paper';
 export default function indexM() {
     return (
 
-        <View style={styles.container}>
-
             <View style={styles.container}>
 
                     <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -29,26 +27,24 @@ export default function indexM() {
                             </Text>
                         </View>
                     </View>
+
                     <View style={{ flex: 1, flexDirection: 'row' }}>
                         <View style={{ flexGrow: 1, paddingTop: 30, paddingHorizontal: 20 }}>
                             <Avatar.Image size={200} source={require('../assets/Steffany.png')} />
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
                                 Steffany Aseret Roa Cañedo - 2020431
-                    </Text>
+                            </Text>
                         </View>
-
                         <View style={{ paddingTop: 30, paddingHorizontal: 20 }}>
                             <Avatar.Image size={200} source={require('../assets/Walter.png')} />
                             <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
                                 Walter Guimarães Junior - 2020403
-                    </Text>
-
+                            </Text>
                         </View>
-
                     </View>
                
             </View>
-        </View>
+       
     )
 
 }
