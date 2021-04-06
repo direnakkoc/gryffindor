@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity, Text } from "react-native";
 import { Camera } from "expo-camera";
 import Icon from "react-native-vector-icons/FontAwesome";
 

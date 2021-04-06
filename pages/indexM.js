@@ -2,7 +2,7 @@
 PAGE FOR EDITING-- FREE PAGE */
 
 import React from 'react';
-import { View, Text, Image, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 export default function indexM() {
