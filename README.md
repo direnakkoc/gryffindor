@@ -13,12 +13,15 @@
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-Requirements for implementation Module Camera
-Node.js
-Visual Code
-React native
+>*Requirements for implementation Module Camera*
 
-Installation
+>Node.js
+
+>Visual Code
+
+>React native
+
+>*Installation -Package-
 expo install expo-camera
 expo install expo-media-library
 expo install expo-permissions
