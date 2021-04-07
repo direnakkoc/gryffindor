@@ -11,6 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Login from './Login'
 import index from './indexM'
 import Camera from './Camera'
+import Pagina1 from './Pagina1'
 import { Image } from 'react-native'
 
 const Stack = createStackNavigator();
@@ -25,7 +26,6 @@ export default function Navigator() {
             },
             headerTitleStyle: {
                 fontStyle: 'normal',
-                fontFamily: 'Roboto',
                 fontSize: 30,
                 fontWeight: 'bold',
                 height:60,
@@ -38,6 +38,7 @@ export default function Navigator() {
 
             <Stack.Screen name='Gryffindor' component={Login} options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}}  />
             <Stack.Screen name='About us' component={index}  options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}}  />
+            <Stack.Screen name='Pagina1' component={Pagina1}  options= {{ title: <Image source={require('../assets/title.png')} style={{height:40,width:180}} />}}  />
             <Stack.Screen name='camera' component={Camera}  />
 
 

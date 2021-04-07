@@ -1,13 +1,26 @@
 /* ///////////  A B O U T    US   ////////// 
 PAGE FOR EDITING-- FREE PAGE */
 
-import React from 'react';
-import { View, Text, Image, StyleSheet, ImageBackground, ScrollView } from 'react-native';
+import React,{useEffect,useState} from 'react';
+import { View, Text, Image, StyleSheet, ImageBackground, ScrollView, requireNativeComponent } from 'react-native';
 import { Avatar } from 'react-native-paper';
+
+import * as Font from 'expo-font';
+
+
 
 
 
 export default function indexM() {
+    const[fontsLoaded, setFontsLoaded] = useState(false);
+    useEffect (()=>{
+        if(!fontsLoaded){
+            Font.loadAsync({
+                Charlotte:require('../assets/fonts/Charlotte.otf'),
+                
+            });
+        }
+    });
     return (
 
         <ScrollView>
@@ -55,10 +68,11 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "white",
+        fontFamily:'Charlotte',
         fontWeight: 'bold',
-        fontSize: 15,
+        fontSize: 22,
         fontStyle: 'italic',
         textAlign: "center",
-        fontFamily: "Charlotte"
+        
     }
 });

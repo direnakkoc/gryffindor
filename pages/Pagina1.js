@@ -3,57 +3,58 @@
 //                     --> npm install react-native-paper
 //
 import React, { useEffect, useState } from "react";
-import { Button, View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { Avatar } from 'react-native-paper';
-import {AppLoading} from 'expo'; 
-
-const getFonts = () => Font.loadsAsyns({
-    'Lucida-regular':require('./assets/fonts/LCALLIG.ttf'),
-    'Lucida-italic':require('./assets/fonts/lucida calligraphy italic.ttf')
-})
+import { View, Text, StyleSheet } from 'react-native';
+import * as Font from 'expo-font';
 
 
-const Stack = createStackNavigator();
-function App() {
+export default function Pagina1() {
+
+const[fontsLoaded, setFontsLoaded] = useState(false);
+    useEffect (()=>{
+        if(!fontsLoaded){
+            Font.loadAsync({
+                Charlotte:require('../assets/fonts/Charlotte.otf'),
+                
+            });
+        }
+    });
 
     return (
-       
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Gryffindor App" component={HomeScreen} />
-                <Stack.Screen name="Camera" component={DetailsScreen} />
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
-}
-
-//Home - Screen 1
-function HomeScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-
-            <Avatar.Image size={300} source={require('./assets/logo.png')} />
-            <Text style={{fontFamily: 'lucida calligraphy italic', fontSize: 20}}>Camera Magic was created to do amazing shots for your daily life</Text>
-            <Button
-                title="Next"
-                onPress={() => navigation.navigate('Camera')}
-            />
-        </View>
-    );
-}
-
-//Screen 2
-function DetailsScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Details Screen</Text>
+        <View>
+            <Text>Hola</Text>
            
-            <Button title="Go back" onPress={() => navigation.goBack()} />
-          
-        </View>
+
+
+
+
+
+        </View> 
+
+
+
+
     );
 }
+       
+        const styles = StyleSheet.create({
 
-export default App;
+            container: {
+                justifyContent: "center",
+                backgroundColor: "#740001",
+                alignItems: "center",
+                flexDirection: "column",
+        
+            },
+            text: {
+                color: "white",
+                fontFamily:'Charlotte',
+                fontWeight: 'bold',
+                fontSize: 22,
+                fontStyle: 'italic',
+                textAlign: "center",
+                
+            }
+        });
+    
+
+

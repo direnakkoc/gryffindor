@@ -16,7 +16,7 @@ export default function Login({ navigation }) {
 
                 <Text style={styles.txt}>Camera</Text></TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('About us')} >
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Pagina1')} >
                 <Text style={styles.txt} >Instagram</Text></TouchableOpacity>
         </View>
 
@@ -46,12 +46,11 @@ const styles = StyleSheet.create({
     },
 
     txt: {
-        fontFamily: "Roboto",
         fontSize: 15,
     },
 
     txts: {
-        fontFamily: "Roboto",
+   
         fontSize: 15,
         color: '#D3A625'
     },
