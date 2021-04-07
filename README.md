@@ -1,4 +1,3 @@
-walter and gabriel
 
 Steffy could work in Hollywood
 
@@ -13,9 +12,9 @@ React native
 
 Installation
 expo install expo-camera
+expo install expo-media-library
+expo install expo-permissions
 
 
 //Diren
-
-
 
