@@ -2,7 +2,7 @@
 PAGE FOR EDITING-- FREE PAGE */
 
 import React from 'react';
-import { View, Text, Image, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, Image, StyleSheet, ImageBackground, ScrollView } from 'react-native';
 import { Avatar } from 'react-native-paper';
 
 
@@ -10,41 +10,36 @@ import { Avatar } from 'react-native-paper';
 export default function indexM() {
     return (
 
-            <View style={styles.container}>
+        <ScrollView>
+        <View style={styles.container}>
 
-                    <View style={{ flex: 1, flexDirection: 'row' }}>
-                        <View style={{ flexGrow: 1, paddingTop: 60, paddingHorizontal: 20 }}>
-                            <Avatar.Image size={200} source={require('../assets/Diren.png')} />
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
-                                Diren Akkoc Demir - 2020266
-                            </Text>
-                            
-                        </View>
-                        <View style={{ paddingTop: 60, paddingHorizontal: 20 }}>
-                            <Avatar.Image size={200} source={require('../assets/Gabriel.png')} />
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
-                                Gabriel Climaco Brites Farina - 2020419
-                            </Text>
-                        </View>
-                    </View>
+            <View style={{ paddingTop: 15, paddingHorizontal: 20 }}>
 
-                    <View style={{ flex: 1, flexDirection: 'row' }}>
-                        <View style={{ flexGrow: 1, paddingTop: 30, paddingHorizontal: 20 }}>
-                            <Avatar.Image size={200} source={require('../assets/Steffany.png')} />
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
-                                Steffany Aseret Roa Cañedo - 2020431
+                <Avatar.Image size={250} source={require('../assets/Diren.png')} />
+                <Text style={styles.text}>
+                    Diren Akkoc Demir - 2020266
                             </Text>
-                        </View>
-                        <View style={{ paddingTop: 30, paddingHorizontal: 20 }}>
-                            <Avatar.Image size={200} source={require('../assets/Walter.png')} />
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>
-                                Walter Guimarães Junior - 2020403
+
+                <Avatar.Image size={250} source={require('../assets/Gabriel.png')} />
+                <Text style={styles.text}>
+                    Gabriel Climaco Brites Farina - 2020419
                             </Text>
-                        </View>
-                    </View>
-               
+
+                <Avatar.Image size={250} source={require('../assets/Steffany.png')} />
+                <Text style={styles.text}>
+                    Steffany Aseret Roa Cañedo - 2020431
+                            </Text>
+
+                <Avatar.Image size={250} source={require('../assets/Walter.png')} />
+                <Text style={styles.text}>
+                    Walter Guimarães Junior - 2020403
+                    </Text>
+
             </View>
-       
+            
+        </View>
+        </ScrollView>
+
     )
 
 }
@@ -52,22 +47,18 @@ export default function indexM() {
 const styles = StyleSheet.create({
 
     container: {
-        flex: 1,
         justifyContent: "center",
         backgroundColor: "#740001",
-        flexDirection: "column"
-    },
-    image: {
-        flex: 1,
-        resizeMode: "cover",
-        justifyContent: "center"
+        alignItems: "center",
+        flexDirection: "column",
+
     },
     text: {
         color: "white",
-        fontSize: 42,
-        fontWeight: "bold",
+        fontWeight: 'bold',
+        fontSize: 15,
+        fontStyle: 'italic',
         textAlign: "center",
-        backgroundColor: "#161a1d",
-        
+        fontFamily: "Charlotte"
     }
 });

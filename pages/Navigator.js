@@ -25,7 +25,7 @@ export default function Navigator() {
             },
             headerTitleStyle: {
                 fontStyle: 'normal',
-                fontFamily: 'Pacifico',
+                fontFamily: 'Roboto',
                 fontSize: 30,
                 fontWeight: 'bold',
                 height:60,

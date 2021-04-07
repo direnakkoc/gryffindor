@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     },
 
     txts: {
-        fontFamily: "Pacifico",
+        fontFamily: "Roboto",
         fontSize: 15,
         color: '#D3A625'
     },
