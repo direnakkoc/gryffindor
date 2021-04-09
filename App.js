@@ -71,7 +71,7 @@ export default function App() {
           console.error("err", error);
         })
     } else {
-      MediaLibrary.createAlbumAsync(albumName, asset) //creating album and saving pic to it
+      MediaLibrary.createAlbumAsync(albumName, asset) //if not, create album and save pic to it
         .then(() => {
           alert("Photo succesfully saved!");
         })
