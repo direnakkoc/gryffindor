@@ -14,6 +14,7 @@ export default function App() {
   const camRef = useRef(null);
   const [takenPhoto, setTakenPhoto] = useState(null);
   const [open, setOpen] = useState(false);
+  const albumName = "Griffyndor";
 
   useEffect(() => {
     {
@@ -54,15 +55,30 @@ export default function App() {
   }
 
   /*function savePicture to save the picture taken
-   got from https://www.youtube.com/watch?v=tj58H9eAJv0 */
+   got from https://www.youtube.com/watch?v=tj58H9eAJv0,
+   https://blog.expo.io/using-expos-medialibrary-api-to-create-an-album-and-save-a-photo-9000931c267b 
+   and https://stackoverflow.com/questions/61132921/expo-medialibrary-createalbumasync-is-creating-multiple-album-with-same-name*/
   async function savePicture() {
-    const asset = await MediaLibrary.createAssetAsync(takenPhoto)
-      .then(() => {
-        alert("Photo succesfully saved!");
-      })
-      .catch((error) => {
-        console.log("err", error);
-      });
+    const asset = await MediaLibrary.createAssetAsync(takenPhoto);
+    const album = await MediaLibrary.getAlbumAsync(albumName);
+
+    if (album) {    //checking if album exists
+      MediaLibrary.addAssetsToAlbumAsync([asset], album, false) //if it does, save photo to it
+        .then(() => {
+          alert("Photo succesfully saved!");
+        })
+        .catch((error) => {
+          console.error("err", error);
+        })
+    } else {
+      MediaLibrary.createAlbumAsync(albumName, asset) //creating album and saving pic to it
+        .then(() => {
+          alert("Photo succesfully saved!");
+        })
+        .catch((error) => {
+          console.error("err", error);
+        });
+    }
   }
 
   return (
@@ -122,14 +138,14 @@ export default function App() {
                 }}
               >
                 <View style={{ margin: 10, flexDirection: "row" }}>
-                  <TouchableOpacity
+                  <TouchableOpacity //discard pic button
                     style={{ margin: 10 }}
                     onPress={() => setOpen(false)}
                   >
                     <Icon name="window-close" size={40} color="#FF0000" />
                   </TouchableOpacity>
 
-                  <TouchableOpacity
+                  <TouchableOpacity //save pic button
                     style={{ margin: 10 }}
                     onPress={savePicture}
                   >
