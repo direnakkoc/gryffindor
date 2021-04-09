@@ -6,7 +6,7 @@ import * as Permissions from "expo-permissions";
 import * as MediaLibrary from "expo-media-library";
 
 /*expo install expo-camera
- expo install expo-media-library*/ 
+ expo install expo-media-library*/
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
@@ -53,7 +53,7 @@ export default function App() {
     }
   }
 
-  /*function takePicture to take a picture
+  /*function savePicture to save the picture taken
    got from https://www.youtube.com/watch?v=tj58H9eAJv0 */
   async function savePicture() {
     const asset = await MediaLibrary.createAssetAsync(takenPhoto)
@@ -84,7 +84,7 @@ export default function App() {
           <Icon name="camera" size={70} color="white" onPress={takePicture} />
         </View>
         <View style={{ flex: 1, alignItems: "center" }}>
-          
+
           {/*code to demonstrate switching camera icon*/}
           <TouchableOpacity
             style={{
