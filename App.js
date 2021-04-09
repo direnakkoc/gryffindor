@@ -108,7 +108,8 @@ export default function App() {
             <Icon name="undo" size={30} color="black" />
           </TouchableOpacity>
 
-          {/* code to show the photo just taken and save it;
+          {/* code to show the photo just taken. 
+          you can either discard or save it.
           got from https://www.youtube.com/watch?v=h8ukVeuzHEY */}
           {takenPhoto && (
             <Modal animationType="slide" transparent={false} visible={open}>
