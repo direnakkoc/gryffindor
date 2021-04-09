@@ -83,7 +83,7 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 3 }} type={type} ref={camRef}></Camera>
+      <Camera style={{ flex: 3 }} type={type} ref={camRef} ratio={Camera.getSupportedRatiosAsync()} />
       <View
         style={{
           flex: 1,
