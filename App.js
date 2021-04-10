@@ -148,6 +148,7 @@ export default function App() {
                   <TouchableOpacity //save pic button
                     style={{ margin: 10 }}
                     onPress={savePicture}
+                    onPress={() => setOpen(false)}
                   >
                     <Icon name="upload" size={40} color="#121212" />
                   </TouchableOpacity>
