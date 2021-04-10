@@ -112,7 +112,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
             }}
-            /* function for switching camera from front to back and back to front*/
+            /* function for switching camera from the Rear camera to the Front camera and the other way around*/
             onPress={() => {
               setType(
                 type === Camera.Constants.Type.back
