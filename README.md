@@ -12,9 +12,9 @@
 + 3. Albums 
 ```
 -------------------------------------------------------------------------------------------------------------------------------------
-```diff
-- *Requirements for implementation Module Camera*
 
+**Requirements for implementation Module Camera**
+```diff
 - Node.js
 
 - Visual Code
