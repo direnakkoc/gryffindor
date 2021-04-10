@@ -12,20 +12,20 @@
 + 3. Albums 
 ```
 -------------------------------------------------------------------------------------------------------------------------------------
+```diff
+- *Requirements for implementation Module Camera*
 
->*Requirements for implementation Module Camera*
+- Node.js
 
->Node.js
+- Visual Code
 
->Visual Code
+- React native
 
->React native
+- *Installation -Package-
+- expo install expo-camera
+- expo install expo-media-library
+- expo install expo-permissions
 
->*Installation -Package-
-expo install expo-camera
-expo install expo-media-library
-expo install expo-permissions
-
-
+```
 
 
