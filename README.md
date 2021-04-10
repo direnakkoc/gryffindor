@@ -21,11 +21,14 @@
 
 - React native
 
-- *Installation -Package-
+# Installation -Package-
 - expo install expo-camera
 - expo install expo-media-library
 - expo install expo-permissions
 
 ```
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
 
 
