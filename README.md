@@ -2,6 +2,8 @@
 
 # Gryffindor Module Camera
 
+![Logo](https://github.com/direnakkocdemir/gryffindor/blob/InterfaceGryffindor/assets/logoGithub.png)
+
 ------------------------------------------------------------------------------------------------------------------------------------
 
 **It project is using Module Camera. The design is based on the movie Harry Potter.**
