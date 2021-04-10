@@ -3,8 +3,8 @@
 # Gryffindor Module Camera
 
 ------------------------------------------------------------------------------------------------------------------------------------------
-**It project is using Module Camera. The design is based on the movie Harry Potter.**
-**The layout consist in four pages on javascript. The root/ index has three buttons. it allowed the user choose three options:**
+**-It project is using Module Camera. The design is based on the movie Harry Potter.**
+**-The layout consist in four pages on javascript. The root/ index has three buttons. it allowed the user choose three options:**
 
 1. About us (Information about the team)
 2. Take a photo (Module Camera)
