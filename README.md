@@ -20,13 +20,16 @@
 - Visual Code
 
 - React native
+```
+-------------------------------------------------------------------------------------------------------------------------------------
 
-# Installation -Package-
+**Installation -Package-**
+```diff
 - expo install expo-camera
 - expo install expo-media-library
 - expo install expo-permissions
-
 ```
+
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
