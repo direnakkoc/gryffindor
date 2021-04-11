@@ -1,3 +1,6 @@
+/**install expo-camera
+ * install expo- permissions
+ *  */ 
 import React, { useState, useEffect, useRef } from "react";
 import { View, TouchableOpacity } from "react-native";
 import { Camera } from "expo-camera";
@@ -5,10 +8,10 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 export default function App() {
 
-  const [hasPermission, setHasPermission] = useState(null);
-  const [type, setType] = useState(Camera.Constants.Type.back);
+  const [hasPermission, setHasPermission] = useState(null);//declared a state for permission
+  const [type, setType] = useState(Camera.Constants.Type.back);//declared a state for camera type
   const camRef = useRef(null);
-
+//request permission function
   useEffect(() => {
     (async () => {
       const { status } = await Camera.requestPermissionsAsync();
@@ -29,7 +32,7 @@ export default function App() {
       const data = await camRef.current.takePictureAsync();
     }
   }
-
+//Added Camera UI
   return (
     <View style={{ flex: 1 }}>
       <Camera
@@ -63,6 +66,7 @@ export default function App() {
               alignItems: "center",
               justifyContent: "center",
             }}
+            //switching Camera from Rear camera to Front camera and the other way around 
             onPress={() => {
               setType(
                 type === Camera.Constants.Type.back
@@ -71,7 +75,7 @@ export default function App() {
               );
             }}
           >
-            <Icon name="undo" size={30} color="black" />
+            <Icon name="undo" size={30} color="black" />{/**Icon for rear camera and front camera */}
           </TouchableOpacity>
         </View>
       </View>
