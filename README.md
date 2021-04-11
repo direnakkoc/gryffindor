@@ -1,2 +1,39 @@
-# gryffindor
-Hardware Interaction
+
+
+# Gryffindor Module Camera
+
+![Logo](https://github.com/direnakkocdemir/gryffindor/blob/InterfaceGryffindor/assets/logoGithub.png)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+**It project is using Module Camera. The design is based on the movie Harry Potter.**
+**The layout consist in four pages on javascript. The root/ index has three buttons. it allowed the user choose three options:**
+```diff
++ 1. About us (Information about the team)
++ 2. Take a photo (Module Camera)
++ 3. Albums 
+```
+-------------------------------------------------------------------------------------------------------------------------------------
+
+**Requirements for implementation Module Camera**
+```diff
+- Node.js
+
+- Visual Code
+
+- React native
+```
+-------------------------------------------------------------------------------------------------------------------------------------
+
+**Installation -Package-**
+```diff
+- expo install expo-camera
+- expo install expo-media-library
+- expo install expo-permissions
+```
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+
