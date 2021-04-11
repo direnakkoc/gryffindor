@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://github.com/direnakkocdemir/gryffindor/blob/InterfaceGryffindor/assets/logoGithub.png">
-    <img src="https://github.com/direnakkocdemir/gryffindor/blob/InterfaceGryffindor/assets/logoGithub.png" alt="Logo" width="120" height="200">
+    <img src="https://github.com/direnakkocdemir/gryffindor/blob/InterfaceGryffindor/assets/logoGithub.png" alt="Logo">
   </a>
 
   <h3 align="center">GRYFFINDOR CAMERA</h3>
@@ -58,12 +58,8 @@ Example
 <!--Contact -->
 ## Contact
 
-<h3>Diren Akkoc Demir <a href="https://github.com/direnakkocdemir">GITHUB</a> - drnakkoc94@gmail.com</h3>
-<br>
-<h3>Walter Guimaraes Junior <a href="https://github.com/WalterGJunior">GITHUB</a> - walterguimaraesjr@gmail.com</h3>
-<br>
-<h3>Steffany.... <a href="https://github.com/xexenias">GITHUB</a> - ...@gmail.com</h3>
-<br>
-<h3>Gabriel...<a href="https://github.com/gakito">GITHUB</a> - ...@gmail.com</h3>
--------------------------------------------------------------------------------------------------------------------------------------
+<h4>Diren Akkoc Demir - <a href="https://github.com/direnakkocdemir">GITHUB</a> - drnakkoc94@gmail.com</h4>
+<h4>Walter Guimaraes Junior - <a href="https://github.com/WalterGJunior">GITHUB</a> - walterguimaraesjr@gmail.com</h4>
+<h4>Steffany.... - <a href="https://github.com/xexenias">GITHUB</a> - ...@gmail.com</h4>
+<h4>Gabriel... - <a href="https://github.com/gakito">GITHUB</a> - ...@gmail.com</h4>
 
