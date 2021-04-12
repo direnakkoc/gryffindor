@@ -49,6 +49,11 @@ expo install expo-permissions
 expo install expo-media-library
 ```
 
+4. 
+```sh
+expo install react-native-paper
+```
+
 
 <!--Usage -->
 ## Usage
