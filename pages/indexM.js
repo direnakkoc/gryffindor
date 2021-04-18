@@ -105,11 +105,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginBottom: 10,
-        //backgroundColor: "#740001"
       },
-      logo: {
-        
-      }
+
 
 
 });
