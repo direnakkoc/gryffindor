@@ -16,8 +16,8 @@ export default function Login({ navigation }) {
 
                 <Text style={styles.txt}>Camera</Text></TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Pagina1')} >
-                <Text style={styles.txt} >Instagram</Text></TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Album')} >
+                <Text style={styles.txt} >Album</Text></TouchableOpacity>
         </View>
 
     );
