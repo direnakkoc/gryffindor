@@ -1,5 +1,7 @@
 import React from "react";
 import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
+import Button from 'react-native-flat-button'
+ 
 
 export default function Login({ navigation }) {
     return (
@@ -8,17 +10,26 @@ export default function Login({ navigation }) {
         <View style={styles.container}>
             <Image source={require('../assets/logo.png') } style={{height:350,width:250}} />
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('About us')} >
 
-                <Text style={styles.txt}>About us</Text></TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('camera')} >
+                <Button type="warn"   onPress={() => navigation.navigate('About us')}
+                containerStyle={styles.buttonContainer}>
+                    <Text style={styles.txt}>About us</Text>
+                </Button>
 
-                <Text style={styles.txt}>Camera</Text></TouchableOpacity>
+                <Button type="warn"   onPress={() => navigation.navigate('camera')}
+                containerStyle={styles.buttonContainer}>
+                    <Text style={styles.txt}>Camera</Text>
+                </Button>
 
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Album')} >
-                <Text style={styles.txt} >Album</Text></TouchableOpacity>
+                <Button type="warn"   onPress={() => navigation.navigate('Album')}
+                containerStyle={styles.buttonContainer}>
+                    <Text style={styles.txt}>Album</Text>
+                </Button>
+
         </View>
+
+        
 
     );
 
@@ -33,26 +44,21 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#740001"
     },
- 
-    button: {
-        alignItems: 'center',
-        backgroundColor: '#D3A625',
-        width: 120,
-        marginTop: 20,
-        padding: 5,
-        alignContent: 'center',
-        borderRadius: 25,
 
-    },
+    buttonContainer: {
+        width: 200,
+        height: 50,
+        marginVertical: 5,
+        borderRadius: 25,
+        marginTop: 35,       
+        backgroundColor: '#D3A625',
+        alignItems: 'center',
+
+      },
 
     txt: {
-        fontSize: 15,
-    },
-
-    txts: {
-   
-        fontSize: 15,
-        color: '#D3A625'
+        fontSize: 20,
+        color: '#000000'
     },
 
     imgs: { height: 200, width: 200, justifyContent: 'center'}

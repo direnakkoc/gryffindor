@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "white",
-        fontFamily:'Charlotte',
+        //fontFamily:'Charlotte',
         fontWeight: 'bold',
         fontSize: 20,
         fontStyle: 'italic',
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     },
     quote: {
         color: "#cb9232",
-        fontFamily:'Charlotte',
+        //fontFamily:'Charlotte',
         fontWeight: 'bold',
         fontSize: 20,
         fontStyle: 'italic',

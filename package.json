@@ -20,6 +20,7 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-camera": "^3.43.3",
+    "react-native-flat-button": "^1.0.6",
     "react-native-paper": "^4.7.2",
     "react-native-vector-icons": "^8.1.0",
     "react-native-web": "~0.13.12"
