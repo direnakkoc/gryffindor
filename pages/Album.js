@@ -7,7 +7,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import * as Font from 'expo-font';
 
 
-export default function Pagina1() {
+export default function Album() {
 
 const[fontsLoaded, setFontsLoaded] = useState(false);
     useEffect (()=>{
@@ -20,8 +20,8 @@ const[fontsLoaded, setFontsLoaded] = useState(false);
     });
 
     return (
-        <View>
-            <Text>Hola</Text>
+        <View style={styles.container}>
+            <Text style={styles.text}>Hola</Text>
            
 
 
@@ -36,24 +36,24 @@ const[fontsLoaded, setFontsLoaded] = useState(false);
     );
 }
        
-        const styles = StyleSheet.create({
+const styles = StyleSheet.create({
 
-            container: {
-                justifyContent: "center",
-                backgroundColor: "#740001",
-                alignItems: "center",
-                flexDirection: "column",
+    container: {
+        justifyContent: "center",
+        backgroundColor: "#740001",
+        alignItems: "center",
+        flexDirection: "column"
+
+    },
+    text: {
+        color: "white",
+        fontFamily:'Charlotte',
+        fontWeight: 'bold',
+        fontSize: 15,
+        fontStyle: 'italic',
+        textAlign: "center",
         
-            },
-            text: {
-                color: "white",
-                fontFamily:'Charlotte',
-                fontWeight: 'bold',
-                fontSize: 22,
-                fontStyle: 'italic',
-                textAlign: "center",
-                
-            }
+    }
         });
     
 

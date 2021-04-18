@@ -36,7 +36,7 @@ export default function indexM() {
                 <Avatar.Image size={250} source={require('../assets/Gabriel.png')} />
                 <Text style={styles.text}>
                     Gabriel Climaco Brites Farina - 2020419
-                            </Text>
+                </Text>
 
                 <Avatar.Image size={250} source={require('../assets/Steffany.png')} />
                 <Text style={styles.text}>
@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "#740001",
         alignItems: "center",
-        flexDirection: "column",
+        flexDirection: "column"
 
     },
     text: {
         color: "white",
-        fontFamily:'Charlotte',
+        //fontFamily:'Charlotte',
         fontWeight: 'bold',
-        fontSize: 22,
+        fontSize: 15,
         fontStyle: 'italic',
         textAlign: "center",
         
