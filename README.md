@@ -53,7 +53,10 @@ expo install expo-media-library
 ```sh
 expo install react-native-paper
 ```
-
+5. 
+```sh
+npm i react-native-flat-button --save
+```
 
 <!--Usage -->
 ## Usage
