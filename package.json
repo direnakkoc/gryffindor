@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "expo": "^40.0.1",
+    "expo-blur": "~8.2.2",
     "expo-camera": "~9.1.0",
+    "expo-image-picker": "~9.2.0",
     "expo-media-library": "~10.0.0",
     "expo-permissions": "~10.0.0",
     "expo-status-bar": "~1.0.3",

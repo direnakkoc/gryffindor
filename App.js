@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, TouchableOpacity, Modal, Image } from "react-native";
+import { View, TouchableOpacity, Modal, Image, Text } from "react-native";
 import { Camera } from "expo-camera";
 import Icon from "react-native-vector-icons/FontAwesome";
 import * as Permissions from "expo-permissions";
@@ -79,14 +79,26 @@ export default function App() {
           console.error("err", error);
         });
     }
-  }
+  };
 
   return (
     <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 3 }} type={type} ref={camRef}></Camera>
+
       <View
         style={{
-          flex: 1,
+          paddingTop: 50,
+          paddingBottom: 10,
+          backgroundColor: "black",
+          alignItems: "center",
+        }}>
+        <Icon name="bolt" size={30} color="white" margin={20} />
+      </View>
+
+      <Camera style={{ flex: 2 }} type={type} ref={camRef}></Camera>
+
+      <View
+        style={{
+          flex: 0.7,
           flexDirection: "row",
           backgroundColor: "black",
           justifyContent: "space-around",
@@ -96,7 +108,7 @@ export default function App() {
         <View style={{ flex: 1, alignItems: "center" }}>
           <Icon name="square" size={50} color="white" />
         </View>
-        <View style={{ flex: 1, alignItems: "center", padding: 50 }}>
+        <View style={{ flex: 1, alignItems: "center", padding: 60 }}>
           <Icon name="camera" size={70} color="white" onPress={takePicture} />
         </View>
         <View style={{ flex: 1, alignItems: "center" }}>
@@ -128,25 +140,34 @@ export default function App() {
           you can either discard or save it.
           got from https://www.youtube.com/watch?v=h8ukVeuzHEY */}
           {takenPhoto && (
-            <Modal animationType="slide" transparent={false} visible={open}>
+            <Modal animationType="slide" transparent={false} visible={open} style={flex = 1}>
+
               <View
                 style={{
-                  flex: 1,
+                  flex: 2,
                   justifyContent: "center",
                   alignItems: "center",
-                  margin: 20,
+                  margin: 15
                 }}
               >
-                <View style={{ margin: 10, flexDirection: "row" }}>
+                <View style={{ flexDirection: "row" }}>
                   <TouchableOpacity //discard pic button
-                    style={{ margin: 10 }}
+                    style={{
+                      paddingTop: 80,
+                      paddingRight: 20,
+                      paddingBottom: 10
+                    }}
                     onPress={() => setOpen(false)}
                   >
                     <Icon name="window-close" size={40} color="#FF0000" />
                   </TouchableOpacity>
 
                   <TouchableOpacity //save pic button
-                    style={{ margin: 10 }}
+                    style={{
+                      paddingTop: 80,
+                      paddingLeft: 20,
+                      paddingBottom: 10
+                    }}
                     onPress={savePicture}
                     onPress={() => setOpen(false)}
                   >
@@ -163,6 +184,6 @@ export default function App() {
           )}
         </View>
       </View>
-    </View>
+    </View >
   );
 }
