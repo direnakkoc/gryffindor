@@ -51,9 +51,15 @@ expo install expo-media-library
 
 4. 
 ```sh
+npm install expo-image-picker
+```
+
+5. 
+```sh
 expo install react-native-paper
 ```
-5. 
+
+6. 
 ```sh
 npm i react-native-flat-button --save
 ```
@@ -69,5 +75,5 @@ Example
 <h4>Diren Akkoc Demir - <a href="https://github.com/direnakkocdemir">GITHUB</a> - drnakkoc94@gmail.com</h4>
 <h4>Walter Guimaraes Junior - <a href="https://github.com/WalterGJunior">GITHUB</a> - walterguimaraesjr@gmail.com</h4>
 <h4>Steffany.... - <a href="https://github.com/xexenias">GITHUB</a> - ...@gmail.com</h4>
-<h4>Gabriel... - <a href="https://github.com/gakito">GITHUB</a> - ...@gmail.com</h4>
+<h4>Gabriel... - <a href="https://github.com/gakito">GITHUB</a> - farinagabrielcb@gmail.com</h4>
 
