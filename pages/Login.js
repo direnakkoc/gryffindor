@@ -10,8 +10,6 @@ export default function Login({ navigation }) {
         <View style={styles.container}>
             <Image source={require('../assets/logo.png') } style={{height:350,width:250}} />
 
-
-
                 <Button type="warn"   onPress={() => navigation.navigate('About us')}
                 containerStyle={styles.buttonContainer}>
                     <Text style={styles.txt}>About us</Text>

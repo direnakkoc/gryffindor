@@ -21,7 +21,7 @@ export default function indexM() {
 
        
         <View style={styles.container}>
-             
+             <ScrollView>
             <View style={styles.row} >
             
                 <View style={{ paddingTop: 15, paddingHorizontal: 20, width: '50%' }} >
@@ -51,7 +51,7 @@ export default function indexM() {
                 
             </View> 
             
-            
+            </ScrollView>
         </View>
         
 
