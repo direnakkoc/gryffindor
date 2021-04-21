@@ -20,39 +20,30 @@ export default function indexM() {
     return (
 
        
-        <View style={styles.container}>
-             <ScrollView>
-            <View style={styles.row} >
-            
-                <View style={{ paddingTop: 15, paddingHorizontal: 20, width: '50%' }} >
-                    <Avatar.Image size={250} source={require('../assets/Diren.png')} />
-                        <Text style={styles.text}>
-                            Diren Akkoc Demir - 2020266
-                        </Text>
-                        <Divider style={{ marginTop: 20, marginBottom: 20  }} />
-                    <Avatar.Image size={250} source={require('../assets/Gabriel.png')} />
-                        <Text style={styles.text}>
-                            Gabriel Climaco Brites Farina - 2020419
-                        </Text>
-                </View>
-               
+        <ScrollView>
+            <View style={styles.container}>
+                <View style={{ paddingTop: 15, paddingHorizontal: 20 }}>
 
-                <View style={{ paddingTop: 15, paddingHorizontal: 20, width: '50%' }} >
+                    <Avatar.Image size={250} source={require('../assets/Diren.png')} />
+                    <Text style={styles.text}>
+                        Diren Akkoc Demir - 2020266`
+                    </Text>
+                    <Avatar.Image size={250} source={require('../assets/Gabriel.png')} />
+                    <Text style={styles.text}>
+                        Gabriel Climaco Brites Farina - 2020419
+                            </Text>
                     <Avatar.Image size={250} source={require('../assets/Steffany.png')} />
-                        <Text style={styles.text}>
-                            Steffany Aseret Roa Cañedo - 2020431
-                        </Text>
-                        <Divider style={{ marginTop: 20, marginBottom: 20 }} />
+                    <Text style={styles.text}>
+                        Steffany Aseret Roa Cañedo - 2020431
+                            </Text>
                     <Avatar.Image size={250} source={require('../assets/Walter.png')} />
-                        <Text style={styles.text}>
-                            Walter Guimarães Junior - 2020403
-                        </Text>
+                    <Text style={styles.text}>
+                        Walter Guimarães Junior - 2020403
+                    </Text>
+
                 </View>
-                
-            </View> 
-            
-            </ScrollView>
-        </View>
+            </View>
+        </ScrollView>
         
 
     )
