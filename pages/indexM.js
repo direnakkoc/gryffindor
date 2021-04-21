@@ -2,8 +2,8 @@
 PAGE FOR EDITING-- FREE PAGE */
 
 import React,{useEffect,useState} from 'react';
-import { View, Text, Image, StyleSheet, ImageBackground, ScrollView, requireNativeComponent } from 'react-native';
-import { Avatar } from 'react-native-paper';
+import { View, Text, StyleSheet, ImageBackground, ScrollView, requireNativeComponent } from 'react-native';
+import { Avatar, Divider } from 'react-native-paper';
 import * as Font from 'expo-font';
 
 export default function indexM() {
@@ -29,19 +29,20 @@ export default function indexM() {
                         <Text style={styles.text}>
                             Diren Akkoc Demir - 2020266
                         </Text>
-
+                        <Divider style={{ marginTop: 20, marginBottom: 20  }} />
                     <Avatar.Image size={250} source={require('../assets/Gabriel.png')} />
                         <Text style={styles.text}>
                             Gabriel Climaco Brites Farina - 2020419
                         </Text>
                 </View>
+               
 
                 <View style={{ paddingTop: 15, paddingHorizontal: 20, width: '50%' }} >
                     <Avatar.Image size={250} source={require('../assets/Steffany.png')} />
                         <Text style={styles.text}>
                             Steffany Aseret Roa Cañedo - 2020431
                         </Text>
-
+                        <Divider style={{ marginTop: 20, marginBottom: 20 }} />
                     <Avatar.Image size={250} source={require('../assets/Walter.png')} />
                         <Text style={styles.text}>
                             Walter Guimarães Junior - 2020403
@@ -50,15 +51,6 @@ export default function indexM() {
                 
             </View> 
             
-            <Image style={{width: 550, height: 150, borderRadius: 45 }}
-                source={require('../assets/cct_logo.png')}
-            />
-
-            <View>
-            <Text style={styles.quote}>
-                            "None of us is as smart as all of us".(Ken Blanchard)
-                        </Text>
-            </View> 
             </ScrollView>
         </View>
         
@@ -82,16 +74,6 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "white",
-        //fontFamily:'Charlotte',
-        fontWeight: 'bold',
-        fontSize: 20,
-        fontStyle: 'italic',
-        textAlign: "center",
-       
-        
-    },
-    quote: {
-        color: "#cb9232",
         //fontFamily:'Charlotte',
         fontWeight: 'bold',
         fontSize: 20,
