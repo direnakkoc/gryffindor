@@ -191,7 +191,7 @@ export default function App() {
 
                   <TouchableOpacity //save pic button
                     style={{
-                      padding: "10%",
+                      padding: "5%",
                       alignItems: "center",
                       alignItems: "center",
                       justifyContent: "center",
