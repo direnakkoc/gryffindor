@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, TouchableOpacity, Modal, Image, Text, Dimensions } from "react-native";
+import {
+  View,
+  TouchableOpacity,
+  Modal,
+  Image,
+  Text,
+  Dimensions,
+} from "react-native";
 import { Camera } from "expo-camera";
 import Icon from "react-native-vector-icons/FontAwesome";
 import * as Permissions from "expo-permissions";
@@ -19,8 +26,8 @@ export default function App() {
   const [albumModal, setAlbumModal] = useState(false);
   const albumName = "Griffyndor";
   const [image, setImage] = useState(null);
-  const windowWidth = Dimensions.get('window').width;
-  const windowHeight = Dimensions.get('window').height;
+  const windowWidth = Dimensions.get("window").width;
+  const windowHeight = Dimensions.get("window").height;
 
   useEffect(() => {
     {
@@ -68,14 +75,15 @@ export default function App() {
     const asset = await MediaLibrary.createAssetAsync(takenPhoto);
     const album = await MediaLibrary.getAlbumAsync(albumName);
 
-    if (album) {    //checking if album exists
+    if (album) {
+      //checking if album exists
       MediaLibrary.addAssetsToAlbumAsync([asset], album, false) //if it does, save photo to it
         .then(() => {
           alert("Photo succesfully saved!");
         })
         .catch((error) => {
           console.error("err", error);
-        })
+        });
     } else {
       MediaLibrary.createAlbumAsync(albumName, asset) //if not, create album and save pic to it
         .then(() => {
@@ -85,7 +93,7 @@ export default function App() {
           console.error("err", error);
         });
     }
-  };
+  }
 
   /*function to access phone albums
   code from https://docs.expo.io/versions/latest/sdk/imagepicker */
@@ -93,7 +101,7 @@ export default function App() {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       aspect: [4, 3],
-      quality: 1
+      quality: 1,
     });
 
     if (!result.cancelled) {
@@ -102,21 +110,10 @@ export default function App() {
       setImage(null);
       setAlbumModal(false);
     }
-
-  }
+  };
 
   return (
-    < View style={{ flex: 1 }}>
-      <View
-        style={{
-          paddingTop: 40,
-          paddingBottom: 10,
-          backgroundColor: "black",
-          alignItems: "center"
-        }}>
-        <Icon name="bolt" size={30} color="white" margin={20} />
-      </View>
-
+    <View style={{ flex: 1 }}>
       <Camera style={{ flex: 2 }} type={type} ref={camRef}></Camera>
 
       <View
@@ -128,15 +125,19 @@ export default function App() {
           alignItems: "center",
         }}
       >
-        <View style={{ flex: 1, alignItems: "center"}}>
-          <Icon name="square" size={50} color="white" onPress={() => setAlbumModal(true)} />
+        <View style={{ flex: 1, alignItems: "center" }}>
+          <Icon
+            name="square"
+            size={50}
+            color="white"
+            onPress={() => setAlbumModal(true)}
+          />
         </View>
 
         <View style={{ flex: 1, alignItems: "center" }}>
           <Icon name="camera" size={70} color="white" onPress={takePicture} />
         </View>
         <View style={{ flex: 1, alignItems: "center" }}>
-
           {/*code to demonstrate switching camera icon*/}
           <TouchableOpacity
             style={{
@@ -164,22 +165,22 @@ export default function App() {
           you can either discard or save it.
           got from https://www.youtube.com/watch?v=h8ukVeuzHEY */}
           {takenPhoto && (
-            <Modal animationType="slide" transparent={false} visible={open} >
-
+            <Modal animationType="slide" transparent={false} visible={open}>
               <View
                 style={{
                   flex: 1,
                   justifyContent: "center",
-                  alignItems: "center"
+                  alignItems: "center",
                 }}
               >
-                <View 
+                <View
                   style={{
-                    flexDirection: "row", top: "10%",
+                    flexDirection: "row",
+                    top: "10%",
                     alignItems: "center",
                     justifyContent: "center",
-                  }}>
-                  
+                  }}
+                >
                   <TouchableOpacity //discard pic button
                     style={{
                       padding: "2%",
@@ -187,7 +188,8 @@ export default function App() {
                       alignItems: "center",
                       justifyContent: "center",
                     }}
-                    onPress={() => setOpen(false)}>
+                    onPress={() => setOpen(false)}
+                  >
                     <Icon name="window-close" size={50} color="#FF0000" />
                   </TouchableOpacity>
 
@@ -198,14 +200,18 @@ export default function App() {
                       alignItems: "center",
                       justifyContent: "center",
                     }}
-                    onPress={savePicture}>
+                    onPress={savePicture}
+                  >
                     <Icon name="upload" size={50} color="#121212" />
                   </TouchableOpacity>
-                
                 </View>
 
                 <Image
-                  style={{ width: windowWidth, height: windowHeight, resizeMode: "contain" }}
+                  style={{
+                    width: windowWidth,
+                    height: windowHeight,
+                    resizeMode: "contain",
+                  }}
                   source={{ uri: takenPhoto }}
                 />
               </View>
@@ -213,30 +219,44 @@ export default function App() {
           )}
 
           {albumModal && (
-            <Modal animationType="slide" transparent={false} visible={albumModal} onShow={pickImage} onDismiss={() => setImage(null)} >
-
+            <Modal
+              animationType="slide"
+              transparent={false}
+              visible={albumModal}
+              onShow={pickImage}
+              onDismiss={() => setImage(null)}
+            >
               <View
                 style={{
                   flex: 1,
                   justifyContent: "center",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 <View style={{ flexDirection: "row", top: "15%" }}>
-                  {image && (<TouchableOpacity
-                    style={{ paddingTop: "20%" }}
-                    onPress={() => setAlbumModal(false)}>
-                    <Icon name="window-close" size={50} color="#FF0000" />
-                  </TouchableOpacity>)}
+                  {image && (
+                    <TouchableOpacity
+                      style={{ paddingTop: "20%" }}
+                      onPress={() => setAlbumModal(false)}
+                    >
+                      <Icon name="window-close" size={50} color="#FF0000" />
+                    </TouchableOpacity>
+                  )}
                 </View>
 
                 <Image
-                  style={{ width: windowWidth, height: windowHeight, resizeMode: "contain" }}
-                  source={{ uri: image }} />
+                  style={{
+                    width: windowWidth,
+                    height: windowHeight,
+                    resizeMode: "contain",
+                  }}
+                  source={{ uri: image }}
+                />
               </View>
             </Modal>
           )}
         </View>
       </View>
-    </View >
+    </View>
   );
-};
+}
