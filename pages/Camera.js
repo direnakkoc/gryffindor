@@ -128,14 +128,14 @@ export default function App() {
           alignItems: "center",
         }}
       >
-        <View style={{ flex: 1, alignItems: "center", paddingBottom: "10%" }}>
+        <View style={{ flex: 1, alignItems: "center"}}>
           <Icon name="square" size={50} color="white" onPress={() => setAlbumModal(true)} />
         </View>
 
-        <View style={{ flex: 1, alignItems: "center", paddingBottom: "10%" }}>
+        <View style={{ flex: 1, alignItems: "center" }}>
           <Icon name="camera" size={70} color="white" onPress={takePicture} />
         </View>
-        <View style={{ flex: 1, alignItems: "center", paddingBottom: "10%" }}>
+        <View style={{ flex: 1, alignItems: "center" }}>
 
           {/*code to demonstrate switching camera icon*/}
           <TouchableOpacity
