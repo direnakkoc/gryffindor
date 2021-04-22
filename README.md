@@ -46,22 +46,26 @@ expo install expo-permissions
 ```
 3. 
 ```sh
-expo install expo-media-library
+npm install react-native-vector-icons/FontAwesome
 ```
-
 4. 
 ```sh
-npm install expo-image-picker
+expo install expo-media-library
 ```
 
 5. 
 ```sh
-expo install react-native-paper
+npm install expo-image-picker
 ```
 
 6. 
 ```sh
-npm i react-native-flat-button --save
+expo install react-native-paper
+```
+
+7. 
+```sh
+npm install react-native-flat-button --save
 ```
 
 <!--Usage -->
