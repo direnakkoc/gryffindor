@@ -22,7 +22,7 @@ export default function indexM() {
        
         <ScrollView>
             <View style={styles.container}>
-                <View style={{ paddingTop: 15, paddingHorizontal: 20 }}>
+                <View style={{ paddingTop: 15, paddingHorizontal: 20, justifyContent: 'center', alignItems: 'center', }}>
 
                     <Avatar.Image size={250} source={require('../assets/Diren.png')} />
                     <Text style={styles.text}>
