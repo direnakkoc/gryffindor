@@ -9,7 +9,7 @@ Requirements:
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./Login";
-import index from "./indexM";
+import index from "./AboutUs";
 import Camera from "./Camera";
 import Album from "./Album";
 import { Image } from "react-native";

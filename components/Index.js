@@ -2,7 +2,6 @@ import React from "react";
 import { View, TouchableOpacity, Text, StyleSheet, Image } from "react-native";
 import Button from 'react-native-flat-button'
 
-
 export default function Login({ navigation }) {
     return (
 
