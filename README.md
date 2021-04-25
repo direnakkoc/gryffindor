@@ -15,11 +15,14 @@
 ## About The Project
 
 It project is using Module Camera. The design is based on the movie Harry Potter.
-The layout consist in four pages on javascript. The root/ index has three buttons. it allowed the user choose three options:
+The layout consist in four pages on javascript. The root/ index has three buttons. It allows the user choose three options:
 
 1. About us (Information about the team)
 2. Take a photo (Module Camera)
-3. Albums
+3. Album (Photos taken by the Camera)
+
+<!-- Photos of the Components -->
+## Overview
 
 <!-- Getting Start-->
 ## Getting Start
@@ -36,7 +39,7 @@ Requirements for implementation Module Camera
 
 Installation -Package-
 
-1. Installing expo camera library
+1. 
 ```sh
 expo install expo-camera
 ```
@@ -78,6 +81,6 @@ Example
 
 <h4>Diren Akkoc Demir - <a href="https://github.com/direnakkocdemir">GITHUB</a> - drnakkoc94@gmail.com</h4>
 <h4>Walter Guimaraes Junior - <a href="https://github.com/WalterGJunior">GITHUB</a> - walterguimaraesjr@gmail.com</h4>
-<h4>Steffany.... - <a href="https://github.com/xexenias">GITHUB</a> - ...@gmail.com</h4>
-<h4>Gabriel... - <a href="https://github.com/gakito">GITHUB</a> - farinagabrielcb@gmail.com</h4>
+<h4>Steffany Aseret Roa Canedo - <a href="https://github.com/xexenias">GITHUB</a> - xexenias@gmail.com</h4>
+<h4>Gabriel Climaco Brites Farina - <a href="https://github.com/gakito">GITHUB</a> - farinagabrielcb@gmail.com</h4>
 
