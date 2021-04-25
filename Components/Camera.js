@@ -1,23 +1,20 @@
-import React, { useState, useEffect, useRef } from "react";
-import {
-  View,
-  TouchableOpacity,
-  Modal,
-  Image,
-  Text,
-  Dimensions,
-  Button
-} from "react-native";
 import { Camera } from "expo-camera";
-import Icon from "react-native-vector-icons/FontAwesome";
-import * as Permissions from "expo-permissions";
-import * as MediaLibrary from "expo-media-library";
 import * as ImagePicker from "expo-image-picker";
+import * as MediaLibrary from "expo-media-library";
+import * as Permissions from "expo-permissions";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Dimensions, Image, Modal,
+
+  Text, TouchableOpacity, View
+} from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 /*expo install expo-camera
  expo install expo-permissions
  expo install expo-media-library
- expo install expo-image-picker*/
+ expo install expo-image-picker
+ npm install react-native-vector-icons*/
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState(null);

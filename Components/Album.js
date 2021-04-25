@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
     text: {
         color: "white",
         fontFamily:'Charlotte',
-        fontWeight: 'bold',
         fontSize: 15,
         fontStyle: 'italic',
         textAlign: "center",

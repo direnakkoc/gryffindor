@@ -8,8 +8,8 @@ Requirements:
 
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "./Login";
-import index from "./indexM";
+import Login from "./Index";
+import index from "./AboutUs";
 import Camera from "./Camera";
 import Album from "./Album";
 import { Image } from "react-native";
@@ -25,8 +25,6 @@ export default function Navigator() {
         options={{
           headerStyle: {
             backgroundColor: "#000000",
-            fontStyle: "normal",
-            fontWeight: "bold",
             height: 60,
           },
           headerTitleAlign: "center",
@@ -47,8 +45,6 @@ export default function Navigator() {
         options={{
           headerStyle: {
             backgroundColor: "#000000",
-            fontStyle: "normal",
-            fontWeight: "bold",
             height: 60,
           },
           headerTitleAlign: "center",
@@ -68,8 +64,6 @@ export default function Navigator() {
         options={{
           headerStyle: {
             backgroundColor: "#000000",
-            fontStyle: "normal",
-            fontWeight: "bold",
             height: 60,
           },
           headerTitleAlign: "center",
@@ -89,9 +83,6 @@ export default function Navigator() {
         options={{
           headerStyle: {
             backgroundColor: "black",
-            fontStyle: "normal",
-            fontSize: 30,
-            fontWeight: "bold",
             height: 60,
           },
           headerTitleAlign: "center",
