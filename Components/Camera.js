@@ -13,24 +13,37 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-/*expo install expo-camera
+/*installations needed:
+expo install expo-camera
  expo install expo-permissions
  expo install expo-media-library
  expo install expo-image-picker
  npm install react-native-vector-icons*/
 
 export default function App() {
+  //THESE CONSTS ARE TO:
+
+  //check if user has given permission to access hardware and sensitive information
   const [hasPermission, setHasPermission] = useState(null);
+  //switch from back camera to front camera and vice versa
   const [type, setType] = useState(Camera.Constants.Type.back);
+  //make expo camera 
   const camRef = useRef(null);
+  //store photo just taken
   const [takenPhoto, setTakenPhoto] = useState(null);
+  //activate or deactivate a modal component
   const [open, setOpen] = useState(false);
   const [albumModal, setAlbumModal] = useState(false);
+  //set the name of the album the app creates. 
   const albumName = "Griffyndor";
+  //store an image temporarily 
   const [image, setImage] = useState(null);
+  //gets device's width and height so the photo is always on its dimension
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
-  //Hook is taking action
+
+  /*Hook is taking action to have access to hardware and sensitive information
+  Once it's granted, this set is saved on device settings for this app*/
   useEffect(() => {
     {
       /* request to access camera */
@@ -55,17 +68,15 @@ export default function App() {
   }
   if (hasPermission === false) {
     return <Text>Access denied</Text>;
-    //I changed the text here so it can be a message for either permission
   }
 
   /*function takePicture to take a picture
     got from https://www.youtube.com/watch?v=h8ukVeuzHEY */
   async function takePicture() {
     if (camRef) {
-      const data = await camRef.current.takePictureAsync();
-      setTakenPhoto(data.uri);
-      setOpen(true);
-      console.log(data);
+      const data = await camRef.current.takePictureAsync();   //create an object and store it in data variable
+      setTakenPhoto(data.uri);      //get uri value from object data and store it in 'takenPhoto'
+      setOpen(true);    //Changing value of 'open' variable so the picture taken can be shown
     }
   }
 
@@ -97,15 +108,17 @@ export default function App() {
     }
   }
 
-  /*function to access phone albums
+  /*function to access phone albums and pick a photo from it
   code from https://docs.expo.io/versions/latest/sdk/imagepicker */
   const pickImage = async () => {
+    //specifying the media type and other properties required
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       aspect: [4, 3],
       quality: 1,
     });
 
+    //checking if the user really picked a photo. if true, variable 'image' receives it 
     if (!result.cancelled) {
       setImage(result.uri);
     } else {
@@ -116,8 +129,11 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }}>
+
+      {/*camera and next view got from https://www.youtube.com/watch?v=zvYc5Ar8ni8 */}
       <Camera style={{ flex: 2 }} type={type} ref={camRef}></Camera>
 
+      {/*bottom bar for buttons*/}
       <View
         style={{
           flex: 0.5,
@@ -136,11 +152,13 @@ export default function App() {
           />
         </View>
 
+        {/*button to take photo*/}
         <View style={{ flex: 1, alignItems: "center" }}>
           <Icon name="camera" size={70} color="white" onPress={takePicture} />
         </View>
+
+        {/*code to demonstrate switching camera icon*/}
         <View style={{ flex: 1, alignItems: "center" }}>
-          {/*code to demonstrate switching camera icon*/}
           <TouchableOpacity
             style={{
               borderWidth: 1,
@@ -164,7 +182,7 @@ export default function App() {
           </TouchableOpacity>
 
           {/* code to show the photo just taken. 
-          you can either discard or save it.
+          user can either discard or save it.
           got from https://www.youtube.com/watch?v=h8ukVeuzHEY */}
           {takenPhoto && (
             <Modal animationType="slide" transparent={false} visible={open}>
@@ -212,6 +230,8 @@ export default function App() {
                   </View>
                 </View>
 
+                {/*here is what image is shown, defined by the value of takenPhoto
+                windowWidth and windownHeight make sure the phoot adapts to devices with different sizes */}
                 <Image
                   style={{
                     width: windowWidth,
@@ -225,6 +245,8 @@ export default function App() {
             </Modal>
           )}
 
+          {/*if albumModal is true, modal component come up to show the photo selected by the user 
+          piece of code from own authorship inspired by the previous modal*/}
           {albumModal && (
             <Modal
               animationType="slide"
@@ -263,7 +285,7 @@ export default function App() {
             </Modal>
           )}
         </View>
-      </View>
-    </View>
+      </View >
+    </View >
   );
 }
