@@ -55,8 +55,9 @@ export default function Login({ navigation }) {
         <Text style={styles.txt}>Camera</Text>
       </Button>
 
-      <Button title="Album" onPress={pickImage}
-      containerStyle={styles.buttonContainer} >
+      <Button 
+        type="warn" onPress={pickImage}
+        containerStyle={styles.buttonContainer} >
 
         <Text style={styles.txt}>Album</Text>
         </Button>
