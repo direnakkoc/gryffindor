@@ -24,6 +24,18 @@ The layout consist in four pages on javascript. The root/ index has three button
 <!-- Photos of the Components -->
 ## Overview
 
+<p align="center>
+  <img src="">
+  </p>
+
+<p align="center>
+  <img src="">
+  </p>
+
+<p align="center>
+  <img src="">
+  </p>
+
 <!-- Getting Start-->
 ## Getting Start
 
