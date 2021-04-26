@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "gryffindor",
-    "slug": "gryffindor",
+    "name": "Gryffindor",
+    "slug": "Gryffindor",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logoIcon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -17,13 +17,17 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "cct.hdip2020.gryffindor",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "cct.hdip2020.gryffindor"
     },
     "web": {
       "favicon": "./assets/favicon.png"
