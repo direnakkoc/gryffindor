@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    //fontFamily:'Charlotte',
     fontSize: 20,
     fontStyle: "italic",
     textAlign: "center",

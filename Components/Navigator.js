@@ -3,7 +3,7 @@ Make sure every package is on your computer before running
 
 Requirements:
 -package npm install @react-navigation/stack
--import from folder pages {Login/indexM/ Camera}
+-import from folder pages {Index/AboutUs/Camera/Album}
 */
 
 import React from "react";
@@ -86,7 +86,7 @@ export default function Navigator() {
             height: 60,
           },
           headerTitleAlign: "center",
-          headerTitleStyle: { color:'#000000'},
+          headerTitleStyle: { color: "#000000" },
           headerTintColor: "#ffd700",
         }}
       />
