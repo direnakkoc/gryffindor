@@ -4,9 +4,12 @@ import * as MediaLibrary from "expo-media-library";
 import * as Permissions from "expo-permissions";
 import React, { useEffect, useRef, useState } from "react";
 import {
-  Dimensions, Image, Modal,
-
-  Text, TouchableOpacity, View
+  Dimensions,
+  Image,
+  Modal,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
@@ -27,7 +30,7 @@ export default function App() {
   const [image, setImage] = useState(null);
   const windowWidth = Dimensions.get("window").width;
   const windowHeight = Dimensions.get("window").height;
-
+  //Hook is taking action
   useEffect(() => {
     {
       /* request to access camera */
@@ -122,13 +125,15 @@ export default function App() {
           backgroundColor: "black",
           justifyContent: "space-around",
           alignItems: "center",
-        }} >
+        }}
+      >
         <View style={{ flex: 1, alignItems: "center" }}>
           <Icon
             name="square"
             size={50}
             color="white"
-            onPress={() => setAlbumModal(true)} />
+            onPress={() => setAlbumModal(true)}
+          />
         </View>
 
         <View style={{ flex: 1, alignItems: "center" }}>
@@ -153,7 +158,8 @@ export default function App() {
                   ? Camera.Constants.Type.front
                   : Camera.Constants.Type.back
               );
-            }}>
+            }}
+          >
             <Icon name="undo" size={30} color="black" />
           </TouchableOpacity>
 
@@ -166,22 +172,26 @@ export default function App() {
                 style={{
                   flex: 1,
                   alignItems: "center",
-                }} >
+                }}
+              >
                 <View
                   style={{
                     flexDirection: "row",
                     justifyContent: "center",
                     top: "5%",
-                  }}>
+                  }}
+                >
                   <View
                     style={{
                       padding: "5%",
                       alignItems: "center",
                       alignItems: "center",
                       justifyContent: "center",
-                    }}>
+                    }}
+                  >
                     <TouchableOpacity //discard pic button
-                      onPress={() => setOpen(false)}>
+                      onPress={() => setOpen(false)}
+                    >
                       <Icon name="window-close" size={60} color="red" />
                     </TouchableOpacity>
                   </View>
@@ -192,9 +202,11 @@ export default function App() {
                       alignItems: "center",
                       alignItems: "center",
                       justifyContent: "center",
-                    }}>
+                    }}
+                  >
                     <TouchableOpacity //save pic button
-                      onPress={savePicture}>
+                      onPress={savePicture}
+                    >
                       <Icon name="upload" size={60} color="black" />
                     </TouchableOpacity>
                   </View>
@@ -205,9 +217,10 @@ export default function App() {
                     width: windowWidth,
                     height: windowHeight,
                     resizeMode: "contain",
-                    alignSelf: "baseline"
+                    alignSelf: "baseline",
                   }}
-                  source={{ uri: takenPhoto }} />
+                  source={{ uri: takenPhoto }}
+                />
               </View>
             </Modal>
           )}
@@ -218,18 +231,21 @@ export default function App() {
               transparent={false}
               visible={albumModal}
               onShow={pickImage}
-              onDismiss={() => setImage(null)}>
+              onDismiss={() => setImage(null)}
+            >
               <View
                 style={{
                   flex: 1,
                   justifyContent: "center",
                   alignItems: "center",
-                }}>
+                }}
+              >
                 <View style={{ flexDirection: "row", top: "15%" }}>
                   {image && (
                     <TouchableOpacity
                       style={{ paddingTop: "20%" }}
-                      onPress={() => setAlbumModal(false)}>
+                      onPress={() => setAlbumModal(false)}
+                    >
                       <Icon name="window-close" size={50} color="#FF0000" />
                     </TouchableOpacity>
                   )}
@@ -241,12 +257,13 @@ export default function App() {
                     height: windowHeight,
                     resizeMode: "contain",
                   }}
-                  source={{ uri: image }} />
+                  source={{ uri: image }}
+                />
               </View>
             </Modal>
           )}
         </View>
       </View>
-    </View >
+    </View>
   );
 }
