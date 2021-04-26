@@ -2,20 +2,21 @@
 //                     --> npm install @react-navigation/stack
 //                     --> npm install react-native-paper
 //
+import * as ImagePicker from "expo-image-picker";
 import React, { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import * as Font from "expo-font";
-import * as ImagePicker from 'expo-image-picker';
+import { View } from "react-native";
 
 export default function Album() {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
     (async () => {
-      if (Platform.OS !== 'web') {
-        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        if (status !== 'granted') {
-          alert('Sorry, we need camera roll permissions to make this work!');
+      if (Platform.OS !== "web") {
+        const {
+          status,
+        } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (status !== "granted") {
+          alert("Sorry, we need camera roll permissions to make this work!");
         }
       }
     })();
@@ -37,11 +38,11 @@ export default function Album() {
   };
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Button title="Pick an image from camera roll" onPress={pickImage} />
-      {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
+      {image && (
+        <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
+      )}
     </View>
   );
 }
-
-

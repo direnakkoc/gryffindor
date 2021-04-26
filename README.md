@@ -83,11 +83,6 @@ expo install react-native-paper
 npm install react-native-flat-button --save
 ```
 
-<!--Usage -->
-## Usage
-Example
-
-
 <!--Contact -->
 ## Contact
 

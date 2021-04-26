@@ -1,17 +1,18 @@
-import React,{useState, useEffect} from "react";
+import * as ImagePicker from "expo-image-picker";
+import React, { useEffect, useState } from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import Button from "react-native-flat-button";
-import * as ImagePicker from 'expo-image-picker';
 
 export default function Login({ navigation }) {
   const [image, setImage] = useState(null);
 
   useEffect(() => {
     (async () => {
-      if (Platform.OS !== 'web') {
-        const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
-        if (status !== 'granted') {
-         
+      if (Platform.OS !== "web") {
+        const {
+          status,
+        } = await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (status !== "granted") {
         }
       }
     })();
@@ -32,7 +33,6 @@ export default function Login({ navigation }) {
   };
 
   return (
-    
     <View style={styles.container}>
       <Image
         source={require("../assets/logo.png")}
@@ -55,13 +55,13 @@ export default function Login({ navigation }) {
         <Text style={styles.txt}>Camera</Text>
       </Button>
 
-      <Button 
-        type="warn" onPress={pickImage}
-        containerStyle={styles.buttonContainer} >
-
+      <Button
+        type="warn"
+        onPress={pickImage}
+        containerStyle={styles.buttonContainer}
+      >
         <Text style={styles.txt}>Album</Text>
-        </Button>
-      
+      </Button>
     </View>
   );
 }

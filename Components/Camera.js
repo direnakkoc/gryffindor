@@ -9,7 +9,7 @@ import {
   Modal,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
@@ -27,16 +27,16 @@ export default function App() {
   const [hasPermission, setHasPermission] = useState(null);
   //switch from back camera to front camera and vice versa
   const [type, setType] = useState(Camera.Constants.Type.back);
-  //make expo camera 
+  //make expo camera
   const camRef = useRef(null);
   //store photo just taken
   const [takenPhoto, setTakenPhoto] = useState(null);
   //activate or deactivate a modal component
   const [open, setOpen] = useState(false);
   const [albumModal, setAlbumModal] = useState(false);
-  //set the name of the album the app creates. 
+  //set the name of the album the app creates.
   const albumName = "Griffyndor";
-  //store an image temporarily 
+  //store an image temporarily
   const [image, setImage] = useState(null);
   //gets device's width and height so the photo is always on its dimension
   const windowWidth = Dimensions.get("window").width;
@@ -74,9 +74,9 @@ export default function App() {
     got from https://www.youtube.com/watch?v=h8ukVeuzHEY */
   async function takePicture() {
     if (camRef) {
-      const data = await camRef.current.takePictureAsync();   //create an object and store it in data variable
-      setTakenPhoto(data.uri);      //get uri value from object data and store it in 'takenPhoto'
-      setOpen(true);    //Changing value of 'open' variable so the picture taken can be shown
+      const data = await camRef.current.takePictureAsync(); //create an object and store it in data variable
+      setTakenPhoto(data.uri); //get uri value from object data and store it in 'takenPhoto'
+      setOpen(true); //Changing value of 'open' variable so the picture taken can be shown
     }
   }
 
@@ -118,7 +118,7 @@ export default function App() {
       quality: 1,
     });
 
-    //checking if the user really picked a photo. if true, variable 'image' receives it 
+    //checking if the user really picked a photo. if true, variable 'image' receives it
     if (!result.cancelled) {
       setImage(result.uri);
     } else {
@@ -129,7 +129,6 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }}>
-
       {/*camera and next view got from https://www.youtube.com/watch?v=zvYc5Ar8ni8 */}
       <Camera style={{ flex: 2 }} type={type} ref={camRef}></Camera>
 
@@ -285,7 +284,7 @@ export default function App() {
             </Modal>
           )}
         </View>
-      </View >
-    </View >
+      </View>
+    </View>
   );
 }
