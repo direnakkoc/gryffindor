@@ -24,16 +24,16 @@ The layout consist in four pages on javascript. The root/ index has three button
 <!-- Photos of the Components -->
 ## Overview
 
-<p align="center>
-  <img src="">
+<p align="center">
+  <img src="https://github.com/direnakkocdemir/gryffindor/blob/master/assets/AboutUs.png" alt="AboutUsOverview">
   </p>
 
-<p align="center>
-  <img src="">
+<p align="center">
+  <img src="https://github.com/direnakkocdemir/gryffindor/blob/master/assets/Camera.png" alt="CameraOverview>
   </p>
 
-<p align="center>
-  <img src="">
+<p align="center">
+  <img src="https://github.com/direnakkocdemir/gryffindor/blob/master/assets/Album.png" alt="AlbumOverview">
   </p>
 
 <!-- Getting Start-->
