@@ -1,8 +1,8 @@
 //Index of the interface
 //There are three buttons
-//About us -->
-//Camera
-//Album
+//About us --> information about the team
+//Camera ==> camera module
+//Album ==> Access to the album
 
 
 import React,{useState, useEffect} from "react";
