@@ -1,4 +1,8 @@
 //Index of the interface
+//There are three buttons
+//About us -->
+//Camera
+//Album
 
 
 import React,{useState, useEffect} from "react";
