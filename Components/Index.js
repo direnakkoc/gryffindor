@@ -1,3 +1,6 @@
+//Index of the interface
+
+
 import React,{useState, useEffect} from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import Button from "react-native-flat-button";
