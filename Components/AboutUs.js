@@ -7,6 +7,7 @@ import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { Avatar } from "react-native-paper";
 
 export default function indexM() {
+  //loadind the Font used in this page
   const [fontsLoaded, setFontsLoaded] = useState(false);
   useEffect(() => {
     if (!fontsLoaded) {
@@ -19,22 +20,24 @@ export default function indexM() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <View
-          style={{
-            paddingTop: 15,
-            paddingHorizontal: 20,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+        {/*Container that are defining the position of the icons on the pages*/}
+        <View style={{ paddingTop: 15, paddingHorizontal: 20, justifyContent: "center", alignItems: "center"}}>
+          
+          {/*Here is the code that is showing the Diren's photo and name*/}
           <Avatar.Image size={250} source={require("../assets/Diren.png")} />
           <Text style={styles.text}>Diren Akkoc Demir - 2020266`</Text>
+
+           {/*Here is the code that is showing the Gabriel's photo and name*/}
           <Avatar.Image size={250} source={require("../assets/Gabriel.png")} />
           <Text style={styles.text}>
             Gabriel Climaco Brites Farina - 2020419
           </Text>
+          
+          {/*Here is the code that is showing the Steffany's photo and name*/}
           <Avatar.Image size={250} source={require("../assets/Steffany.png")} />
           <Text style={styles.text}>Steffany Aseret Roa Cañedo - 2020431</Text>
+
+          {/*Here is the code that is showing the Walter's photo and name*/}
           <Avatar.Image size={250} source={require("../assets/Walter.png")} />
           <Text style={styles.text}>Walter Guimarães Junior - 2020403</Text>
         </View>
