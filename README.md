@@ -14,11 +14,10 @@
 <!-- About The Project -->
 ## About The Project
 
-It project is using Module Camera. The design is based on the movie Harry Potter.
-The layout consist in four pages on javascript. The root/ index has three buttons. It allows the user choose three options:
+This project is using the Camera Module. The design is based on the movie Harry Potter. The layout consists of four pages on javascript. The index has three buttons that allow a user to choose three options:
 
 1. About us (Information about the team)
-2. Take a photo (Module Camera)
+2. Camera (Take a photo and file them in the Album)
 3. Album (Photos taken by the Camera)
 
 <!-- Photos of the Components -->
