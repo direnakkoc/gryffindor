@@ -18,7 +18,7 @@ export default function Login({ navigation }) {
         }
       }
     })();
-
+  }, []);
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
