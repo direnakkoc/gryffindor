@@ -1,5 +1,5 @@
 
-//STEFFY
+//Page where is the link to the navigator.
 import React from 'react'
 import {NavigationContainer} from '@react-navigation/native';
 import Navigator from './Components/Navigator'
