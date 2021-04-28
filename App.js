@@ -1,5 +1,6 @@
 
-//STEFFY
+//GRYFFINDOR TEAM - CAMERA MODULE
+
 //App page where is the link to navigator
 //Necessary installation react-navigation/native
 import React from 'react'
