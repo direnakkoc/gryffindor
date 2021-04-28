@@ -42,7 +42,7 @@ A React component that renders a preview for the device's either front or back c
 
 ### Prerequisites
 
-Requirements for implementation Module Camera
+Requirements for implementation Module Camera:
 
 * [Node.js]
 * [Visual Studio Code]
