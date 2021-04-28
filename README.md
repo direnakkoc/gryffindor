@@ -17,7 +17,7 @@
 This project is using the Camera Module. The design is based on the movie Harry Potter. The layout consists of four pages on javascript. The index has three buttons that allow a user to choose three options:
 
 1. About us (Information about the team)
-2. Camera (Take a photo and file them in the Album)
+2. Camera (Take a photo, save Photo
 3. Album (Button access to the camera)
 
 <!-- Photos of the Components -->
