@@ -45,6 +45,7 @@ Requirements for implementation Module Camera
 * [Node.js]
 * [Visual Studio Code]
 * [React Native]
+* [Expo.io]
 
 ### Installation
 
