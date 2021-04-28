@@ -55,6 +55,8 @@ This package automatically adds the CAMERA permission to your app. If you want t
 <!-- Added permissions -->
 <uses-permission android:name="android.permission.CAMERA" />
 
+<!-- Optional permissions -->
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 ### Installation Modules
 
