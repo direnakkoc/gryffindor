@@ -109,5 +109,5 @@ npm install @react-navigation/native
 <h4>Gabriel Climaco Brites Farina - <a href="https://github.com/gakito">GITHUB</a> - farinagabrielcb@gmail.com</h4>
 
 ## ❓ FAQ 
- 
+ Have you have any question?
 
