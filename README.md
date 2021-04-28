@@ -50,7 +50,7 @@ Requirements for implementation Module Camera
 * [Expo.io]
 
 
-###Configure for Android
+### Configure for Android
 
 This package automatically adds the CAMERA permission to your app. If you want to record videos with audio, you have to include the RECORD_AUDIO.
 
