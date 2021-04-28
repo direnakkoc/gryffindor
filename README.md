@@ -108,6 +108,6 @@ npm install @react-navigation/native
 <h4>Steffany Aseret Roa Canedo - <a href="https://github.com/xexenias">GITHUB</a> - xexenias@gmail.com</h4>
 <h4>Gabriel Climaco Brites Farina - <a href="https://github.com/gakito">GITHUB</a> - farinagabrielcb@gmail.com</h4>
 
-## ❓ FAQ
+## ❓ FAQ 
 
 
