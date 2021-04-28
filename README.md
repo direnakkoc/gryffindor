@@ -18,7 +18,7 @@ This project is using the Camera Module. The design is based on the movie Harry 
 
 1. About us (Information about the team)
 2. Camera (Take a photo and file them in the Album)
-3. Album (Photos taken by the Camera)
+3. Album (Button access to the camera)
 
 <!-- Photos of the Components -->
 ## Overview
