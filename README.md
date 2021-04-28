@@ -48,7 +48,12 @@ Requirements for implementation Module Camera
 * [Visual Studio Code]
 * [React Native]
 * [Expo.io]
-###
+###Configure for Android
+
+This package automatically adds the CAMERA permission to your app. If you want to record videos with audio, you have to include the RECORD_AUDIO.
+
+
+
 ### Installation Modules
 
 Installation -Package-
