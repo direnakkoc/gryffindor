@@ -82,6 +82,11 @@ expo install react-native-paper
 npm install react-native-flat-button --save
 ```
 
+8. 
+```sh
+npm install @react-navigation/native
+```
+
 <!--Contact -->
 ## Contact
 
