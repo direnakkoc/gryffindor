@@ -1,4 +1,7 @@
-// You have to install --> npm install @react-navigation/native
+// It page is just for following the structure of the Album button
+//this code is already on the button in the index
+//
+//You have to install --> npm install @react-navigation/native
 //                     --> npm install @react-navigation/stack
 //                     --> npm install react-native-paper
 //
@@ -16,6 +19,7 @@ export default function Album() {
           status,
         } = await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (status !== "granted") {
+          //in case we want an alert we can write next code
           alert("Sorry, we need camera roll permissions to make this work!");
         }
       }
