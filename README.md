@@ -100,12 +100,14 @@ npm install react-native-flat-button --save
 ```sh
 npm install @react-navigation/native
 ```
-
+## 💙 The Team
 <!--Contact -->
 ## Contact
-## 💙 The Team
 <h4>Diren Akkoc Demir - <a href="https://github.com/direnakkocdemir">GITHUB</a> - drnakkoc94@gmail.com</h4>
 <h4>Walter Guimaraes Junior - <a href="https://github.com/WalterGJunior">GITHUB</a> - walterguimaraesjr@gmail.com</h4>
 <h4>Steffany Aseret Roa Canedo - <a href="https://github.com/xexenias">GITHUB</a> - xexenias@gmail.com</h4>
 <h4>Gabriel Climaco Brites Farina - <a href="https://github.com/gakito">GITHUB</a> - farinagabrielcb@gmail.com</h4>
+
+## ❓ FAQ
+
 
