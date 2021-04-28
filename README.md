@@ -53,7 +53,11 @@ Requirements for implementation Module Camera
 ### Configure for Android
 
 This package automatically adds the CAMERA permission to your app. If you want to record videos with audio, you have to include the RECORD_AUDIO.
+<!-- Added permissions -->
+<uses-permission android:name="android.permission.CAMERA" />
 
+<!-- Optional permissions -->
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 
 ### Installation Modules
