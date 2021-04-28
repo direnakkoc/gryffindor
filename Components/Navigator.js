@@ -14,9 +14,11 @@ import Camera from "./Camera";
 import Album from "./Album";
 import { Image } from "react-native";
 
+//create variable Stack to call createsStakcNavigator
 const Stack = createStackNavigator();
 
 export default function Navigator() {
+  //Return the navigation root
   return (
     <Stack.Navigator>
       <Stack.Screen

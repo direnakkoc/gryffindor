@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
   Once it's granted, this set is saved on device settings for this app*/
   useEffect(() => {
     
-    /* request to access camera */
+    /* request to the album is allows press the button Album and got the access */
     (async () => {
       if (Platform.OS !== "web") {
         const {
