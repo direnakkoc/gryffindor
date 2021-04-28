@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 import { View } from "react-native";
 
 export default function Album() {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null);//creation state
 
   useEffect(() => {
     (async () => {
@@ -25,22 +25,22 @@ export default function Album() {
       }
     })();
   }, []);
-
+//variable save album
   const pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
-      allowsEditing: true,
-      aspect: [4, 3],
+      allowsEditing: true,//permission to edit 
+      aspect: [4, 3],//aspect album
       quality: 1,
     });
 
-    console.log(result);
+    console.log(result);//print the result 
 
     if (!result.cancelled) {
       setImage(result.uri);
     }
   };
-
+//return the album 
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Button title="Pick an image from camera roll" onPress={pickImage} />
