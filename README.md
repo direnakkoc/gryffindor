@@ -47,7 +47,7 @@ Requirements for implementation Module Camera
 * [React Native]
 * [Expo.io]
 
-### Installation
+### Installation Modules
 
 Installation -Package-
 
