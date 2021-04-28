@@ -1,6 +1,3 @@
-#expo-camera
-
-A React component that renders a preview for the device's either front or back camera. Camera's parameters like zoom, auto focus, white balance and flash mode are adjustable. With expo-camera, one can also take photos and record videos that are saved to the app's cache. Morever, the component is also capable of detecting faces and bar codes appearing on the preview.
 
 # Gryffindor Module Camera
 
@@ -21,6 +18,9 @@ The present project is using the Camera Module. The design is based on the movie
 1. About us (Information about the team)
 2. Camera (Take a photo, save Photo, delete photo, Flip camera to take a selfie )
 3. Album (Button access to the camera)
+
+expo-camera
+A React component that renders a preview for the device's either front or back camera. Camera's parameters like zoom, auto focus, white balance and flash mode are adjustable. With expo-camera, one can also take photos and record videos that are saved to the app's cache. Morever, the component is also capable of detecting faces and bar codes appearing on the preview.
 
 <!-- Photos of the Components -->
 ## Overview
